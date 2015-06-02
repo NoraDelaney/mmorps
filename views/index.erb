@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body>
+    <h1>Rock, Paper, Scissors - MMORPS</h1>
+    <p>Play rock, paper, scissors against a computer opponent. First to 3 points wins!<p>
+    <%= session[:response] %>
+    <table>
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>You</td>
+          <td><%= session[:player_score] %></td>
+        </tr>
+        <tr>
+          <td>Computer</td>
+          <td><%= session[:computer_score] %></td>
+        </tr>
+      </tbody>
+    </table>
+    <form action= '/mmorps' method="post">
+      <h2>Pick your choice!</h2>
+      <input type="submit" name="choice" value="Rock">
+      <input type="submit" name="choice" value="Paper">
+      <input type="submit" name="choice" value="Scissors">
+    </form>
+  </body>
+</html>
